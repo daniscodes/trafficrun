@@ -29,3 +29,11 @@ const camera = new THREE.OrthographicCamera(
 camera.position.set(200, -200, 300);
 camera.up.set(0, 0, 1);
 camera.lookAt(0, 0, 0);
+
+//set up renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.render(scene, camera);
+
+document.body.appendChild(renderer.domElement);
+
